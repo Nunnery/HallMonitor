@@ -11,6 +11,12 @@
     <name>Hallmonitor</name>
     <description>A services monitoring application.</description>
 
+    <inceptionYear>2017</inceptionYear>
+
+    <prerequisites>
+        <maven>3.0</maven>
+    </prerequisites>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -126,9 +132,9 @@
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-                <version>2.11</version>
+                <version>3.0</version>
                 <configuration>
-                    <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>
+                    <header>${project.basedir}/HEADER</header>
                     <properties>
                         <owner>Richard Harrah</owner>
                         <email>topplethenunnery@gmail.com</email>
@@ -142,6 +148,9 @@
                         <exclude>src/test/resources/**</exclude>
                         <exclude>src/main/resources/**</exclude>
                     </excludes>
+                    <mapping>
+                        <java>SLASHSTAR_STYLE</java>
+                    </mapping>
                 </configuration>
                 <executions>
                     <execution>
