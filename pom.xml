@@ -135,6 +135,7 @@
                     </properties>
                     <includes>
                         <include>src/main/java/io/github/nunnery/**</include>
+                        <include>src/test/java/io/github/nunnery/**</include>
                     </includes>
                     <excludes>
                         <exclude>**/README</exclude>
